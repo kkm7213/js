@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수연습</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function get_average(marks){
+        let average = (marks['국어'] + marks['영어'] + marks['수학'])/3
+        console.log(average)
+        return average;
+    }
+    let marks = {'국어':90, '영어':80, '수학':85}
+    let average = get_average(marks)
+    console.log(`평균은 ${average}점입니다`)
+    ////////////////////////////////////////////
+    let sum = 0;
+    let sum2 = 0;
+    for(let key in marks){
+        let value = marks[key];
+        sum += value;
+        sum2 += 1;
+    }
+    console.log(sum/sum2)
+    ///////////////////////////////////////////////
+    // 700원짜리 음료수를 몇 개 뽑을 수 있는지 모든 경우의 수 출력하기
+    function vending_machine(money){
+        let count = 0;
+        console.log(`음료수 = ${count}개, 잔돈 = ${money}원`)
+
+        for(let i = 700; i <= money; i += 700){
+            count+=1;
+            console.log(`음료수 = ${count}개, 잔돈 = ${money - i}원`)
+        }
+
+    }
+    vending_machine(3000);
+    // 음료수 = 0개, 잔돈 = 3000원
+    // 음료수 = 1개, 잔돈 = 2300원
+    // 음료수 = 2개, 잔돈 = 1600원
+    // 음료수 = 3개, 잔돈 = 900원
+    // 음료수 = 4개, 잔돈 = 200원
+</script>

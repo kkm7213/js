@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제어문</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var num = 1;
+    if (num > 6) {
+        console.log('num은 6보다 큽니다');
+    }
+
+    console.log('연습 끝!');
+
+    // if-else
+    var num = 1;
+    if(num > 6){
+        console.log('6보다 크다');
+    }
+    else{
+        console.log('6보다 이하다');
+    }
+    console.log('연습 끝!');
+    ///////////////////////////////////////
+    var score = 80;
+    if(score > 90){
+        console.log('참 잘했어요~짝짞');
+    }
+    else if(score > 60){
+        console.log('잘했어요~');
+    }
+    else if(score > 30){
+        console.log('공부 좀 하자^-^');
+    }
+    else{
+        console.log('뭐하냐?');
+    }
+    /////////////////////////////////////////////////
+    // 중첩 if 문
+    var num1 = 22;
+    var num2 = 1;
+    if (num1 > 5){
+        if (num2 > 10){
+            console.log('num1, num2');
+        }
+        else{
+            console.log('num1')
+        }
+    }
+    else{
+        console.log('nothing.')
+    }
+    /////////////////////////////////////////////////
+    var id = "sbs";
+    var pw = "1234";
+    // id가 sbs라고 정해놓았을 때
+    if(id === "sbs"){
+        console.log('id가 일치합니다.');
+        // pw가 1234 라고 정해놓았을 때
+        if(pw === "1234"){
+            console.log('패스워드가 일치합니다.');
+            console.log('로그인 성공!');
+        }else{
+            console.log('패스워드가 일치하지 않습니다!')
+        }
+    }else{
+        console.log('id가 일치하지 않습니다!')
+    }
+
+    // "1" == true
+    // 1 == true
+    // "1" == 1
+
+    ////////////////// switch
+    var fruits = "apple";
+    switch(fruits){
+        case "banana":
+            console.log('banana');
+            break;
+        case "apple":
+            console.log('apple');
+            break;
+        case "orange":
+            console.log('orange');
+            break;
+    }
+
+
+    var number = 90;
+
+    if(number >= 50 && number < 90){
+        console.log('못함')
+    }
+    else if(number >= 90){
+        console.log('잘함')
+    }
+    ///////////////////////////////////////////
+    var n1 = 10;
+    var n2 = 20;
+    var n3 = 30;
+    if(n1 < n2){
+        if(n2 < n3){
+            console.log(n3);
+        }else{
+            console.log(n2);
+        }
+    }
+    else{ // n1
+        if(n1 < n3){
+            console.log(n3);
+        }else{
+            console.log(n1);
+        }
+    }
+
+    if(n1 > n2 && n1 > n3){
+        console.log(n1);
+    }
+    else if(n2 > n1 && n2 > n3){
+        console.log(n2);
+    }
+    else{
+        console.log(n3);
+    }
+
+    var max = n1;
+    if(n1 < n2){
+        max = n2;
+    }
+    if(max < n3){
+        max = n3;
+    }
+    console.log(max);
+    ///////////////////////////////////////////
+    // 삼항 연산자 ( 조건식 ? 참 : 거짓 )
+    var result = 1 === 1 ? '참' : '거짓';
+    var result = 1 === 1 ? (2 === 2 ? "2" : "3") : 1;
+    var result = n1 < n2 ? (n2 < n3 ? n3 : n2) : (n1 < n3 ? n3 : n1);
+
+    //////////////////////////////////////
+    var number = 123123;
+    if(number % 2 === 0){
+        console.log('짝수');
+    }else{
+        console.log('홀수');
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

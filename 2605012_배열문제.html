@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>배열문제</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var s = 'abcddeeaacd';
+    // 1. s를 d,c,a,d .. 순으로 역순 출력하세요.
+    for(let i = 10; i >= 0; i--){
+        console.log(s[i]);
+    }
+    // 배열로 변경해서 reverse 한 다음 출력? 굳이?
+    var arr = s.split('');
+    arr.reverse();
+    console.log(arr);
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+    console.log('==================================')
+    // 2. s 문자열에서 홀수번째 문자만 출력하세요.
+    for(let i = 0; i < s.length; i++){
+        if(i % 2 === 0){
+            console.log(s[i]);
+        }
+    }
+    console.log('==================================')
+    // 3. s에서 연속되는 문자는 한 개만 출력해서 전부 출력하세요.
+    //// => a,b,c,d,e,a,c,d 가 순서대로 나와야 함
+    for(let i = 0; i < s.length; i++){
+        if(i === 0){
+            console.log(s[i]);
+        }
+        else if( s[i] !== s[i-1] ){ // ?
+            console.log(s[i]);
+        }
+    }
+    var s = "Hello World!";
+    // s에서 3번째 이후 문자를 test 로 변경한 문자열 출력
+    //// 정답=> Heltestorld!
+    var result = s.substring(0, 4) + "test" + s.substring(7);
+    console.log(result);
+
+    var sArr = ['a', 'p', 'p', 'l', 'e'];
+    // sArr 을 사용하여 apple 문자열 생성하세요.
+    var result = sArr[0] + sArr[1] + sArr[2] + sArr[3] + sArr[4];
+    
+    var result = sArr.join('');
+    
+    var result = "";
+    for(let i = 0; i < sArr.length; i++){
+        result += sArr[i];
+    }
+    console.log(result);
+    
+    
+    
+    
+
+    var s = "010-1234-5678";
+    var s = "053-123-1234";
+    // s 문자열이 위의 형태일 때, 전화번호 마지막 4글자를 *로 변경해서 출력
+    /// 010-1234-****
+    /// 053-123-****
+    var tel = s.slice(0, -4) + '****'
+    console.log(tel);
+    // num_list 에서 마지막 원소가 그 전 원소보다 크면 마지막 원소에서 그 전 원소를 뺀 값을,
+    // 마지막 원소가 그 전 원소보다 크지 않다면 마지막 원소를 두 배한 값을 추가한 배열을 출력.
+    var num_list = [2,1,6];
+    // 이 상황에서는 [2,1,6,5] 이 정답
+    var num_list = [5,2,1,7,5];
+    // 이 상황에서는 [5,2,1,7,5,10] 이 정답
+    var last = num_list.length - 1;
+    var prev = num_list.length - 2;
+    if(last > prev){
+        num_list.push(last - prev);
+    }else{
+        num_list.push(last * 2);
+    }
+    console.log(num_list);
+
+    // 양의 정수 n이 매개변수로 주어질 때,
+    // n이 홀수라면 n 이하의 홀수인 모든 양의 정수의 합을,
+    // n이 짝수라면 n 이하의 짝수인 모든 양의 정수의 제곱의 합을 출력
+    var n = 7; // 이때는 정답 16
+    var n = 10; // 이때는 정답 220
+    var result = 0;
+    if)(n % 2 ===1){
+        for(let i = 1; i <= n; i++){
+            if(i % 2 === 1){
+                result += i;
+            }
+        }
+    }
+
+    var arr = [];
+    // 1. arr 배열에 20부터 50까지 추가하세요
+    // 1번 결과에서 3 혹은 4의 공배수만 남기고 제거하세요.
+
+    // 배열에 등차수열 넣기
+    var arr = []; // 일 때, 100 이하의 7의 등차수열의 값들을 추가하세요
+    // [7, 14, 21, ... 93]
+    // 피보나치 수열 만들기
+    var arr = [1, 1]; // 일 때, 50 이하의 피보나치 수열 값들을 추가하세요.
+
+
+
+    var str = "apporoograpemmemprs";
+    var indices = [1, 16, 6, 15, 0, 10, 11, 3];
+    // str 에서 indices 의 원소에 해당하는 인덱스들의 글자를 지우고 이어 붙인 문자열을 출력하세요.
+    // 정답: "programmers"
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var flag = true; // 일단 전부 짝수라고 생각하자
+    var arr = [1,23,5,1365,356,236246,462,2];
+    for(let i = 0; i < arr.length; i++){
+        let data = arr[i];
+        if(data % 2 !== 0){
+            flag = false;
+        }
+    }
+    // console.log(flag);
+    /////////////////////////////////////////////
+    function func1(number){
+        if(number % 2 === 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    var arr = [2,4,2,44,4];
+    var result = arr.every(func1);
+    console.log(`every의 결과: ${result}`);
+    /////////////////////////////////////////////////////////
+
+    var result = arr.every(number => number % 2 === 0);
+    console.log(`every의 결과: ${result}`);
+////////////////////////////////////////////////////////////
+    var arr = [21,4,43,45,4243,52,5,142,24,25,234,333];
+    var result = [];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 3 === 0){
+            result.push(arr[i]);
+        }
+    }
+    // console.log(result);
+    /////////////////////////////////////////////////////////
+    var result = arr.filter(number => number % 3 === 0);
+    console.log(result);
+    ////////////////////////////////////////////////////////
+    arr = [123,134,23453,3,4]
+    arr.forEach(number => console.log(number));
+    //////////////////////////////////////////////////////////
+    var arr = [125,135,23453,3,4];
+    result = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 5 === 0){
+            result = arr[i];
+            break;
+        }
+    }
+//////////////////////////////////////////////////////////////
+    var result = arr.find(number => number % 5 === 0);
+    console.log(result);
+    ////////////////////////////////////////////////////////
+    var arr = [1,2,3,4,5,6,7,8,9,10];
+    var result = [];
+    for(let i = 0; i < arr.length; i++){
+        let data = arr[i] * 10;
+        result.push(data);
+    }
+    //////////////////////////////////////////////////////
+    var arr = [1,2,3,4,5,6,7,8,9,10];
+    var result = arr.map(number => number * 10)
+    console.log(result);
+
+
+</script>

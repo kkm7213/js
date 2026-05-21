@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>목록실습</title>
+</head>
+<body>
+
+    <h1>목록 관리</h1>
+    목록: <input type="text"> <button>추가</button>
+    <section>
+        <div>목록을 추가하세요</div>
+    </section>
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    let section = document.getElementsByTagName('section')[0]
+    let input = document.getElementsByTagName('input')[0]
+    let button = document.getElementsByTagName('button')[0]
+    let count = 1;
+    button.onclick = c;
+
+    function c(){
+        let divElem = document.createElement('div')
+        divElem.textContent =  (count++)+input.value
+        section.appendChild(divElem)
+        input.value = ''
+        input.focus()
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

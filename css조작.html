@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css조작</title>
+</head>
+<style>
+  #s1{
+    width: 200px;
+    height: 200px;
+  }
+</style>
+<body>
+  <section id="s1">
+    SECTION
+  </section>
+</body>
+</html>
+<script>
+  let s1 = document.querySelector('#s1')
+  s1.style.backgroundColor = 'red'
+  s1.style.size = '24px'
+  // let w = s1.style.width
+  // console.log(w)
+  let w =getComputedStyle(s1).width
+  let r = w.replace('px','')
+  let rNum = +r
+  console.log(rNum + 100)
+  s1.style.width = `${rNum + 100}px`
+  console.log(s1.style.width)
+
+  let h = getComputedStyle(s1).height
+  let r2 = h.replace('px','')
+  let rNum2 = +r2
+  console.log(rNum2 + 100)
+  s1.style.height = `${rNum2 + 200}px`
+  console.log(s1.style.height)
+
+
+
+
+
+
+
+</script>

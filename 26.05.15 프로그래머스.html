@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>프로그래머스</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+//     //커피
+//     function solution(money) {
+//         let count = 0;
+//         let change = 0;
+//         if(money<5500){
+//             return [0, money];
+//         }
+//
+//         for(let i=5500;i<=money;i+=5500){
+//             count+=1;
+//             change = money - i;
+//         }
+//         result = [count, change];
+//         console.log(result);
+//         return result;
+//     }
+//     solution(5500);
+//     ///////////////////////////////////////////////////////////////////////////////////
+//     //특정 문자 제거하기
+//     function solution(my_string, letter) {
+//         for(let i=0;i<my_string.length;i++){
+//             if(my_string[i]===letter){
+//                 return i;
+//             }
+//         }
+//     }
+//     solution('abcdef', 'f');
+// /////////////////////////////////////////////////////////////////////////////////////
+//     //머쓱이보다 키 큰 사람
+//     function solution(array, height) {
+//         let count = 0;
+//         for(let i=0;i<=array.length;i++){
+//             if(array[i]>height){
+//                 count+=1;
+//             }
+//         }
+//         return count;
+//     }
+//     solution([149, 180, 192, 170], 167);
+    /////////////////////////////////////////////////////////////////////////////////
+    //배열 뒤집기
+    function solution(num_list) {
+        let result = num_list.reverse();
+        return result;
+    }
+    console.log(solution([1,2,3,4,5]));
+
+
+
+</script>

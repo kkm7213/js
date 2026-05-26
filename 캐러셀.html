@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>캐러셀</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 1000px;
+        height: 800px;
+        overflow: hidden;
+        position: relative;
+    }
+    .button_container{
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        position: absolute;
+        align-items: center;
+        padding: 0 20px;
+
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid black;
+        cursor: pointer;
+        z-index:99;
+    }
+    .carousel{
+        height: 100%;
+        display: inline-flex;
+        background-color: blue;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        transition-duration: 1s;
+    }
+    .slide{
+        width: 1000px;
+        background-color: green;
+        border: 1px solid black;
+        position: relative;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slide > div{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <section class="container">
+        <div class="button_container">
+            <button type="button">prev</button>
+            <button type="button">next</button>
+        </div>
+        <ul class="carousel">
+            <li class="slide">
+                <div>
+                    <h2>TITLE</h2>
+                    <p>인테리어1</p>
+                </div>
+                <img src="https://i.pinimg.com/736x/ca/d3/ed/cad3ed5dc4a70b66eb44f7c199565a44.jpg" alt="">
+            </li>
+            <li class="slide">
+                <div>
+                    <h2>TITLE</h2>
+                    <p>인테리어2</p>
+                </div>
+                <img src="https://i.pinimg.com/736x/41/41/e6/4141e6ca51130ad8ec937d2396950c44.jpg" alt="">
+            </li>
+            <li class="slide">
+                <div>
+                    <h2>TITLE</h2>
+                    <p>인테리어3</p>
+                </div>
+                <img src="https://i.pinimg.com/736x/4b/60/11/4b6011f60a03d81b78dfdb1f2455ca3d.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
+<script>
+    let carousel = document.querySelector('.carousel');
+    let [left, right] = document.querySelectorAll('button');
+    document.querySelectorAll('.slide img').forEach(img => img.draggable = false);
+    let movedX = 0;
+    left.onclick = () => {
+        if(movedX <= 3000){
+            movedX += 1000;
+            carousel.style.transform = `translateX(${movedX}px)`;
+        }else{
+            movedX = 0;
+            carousel.style.transform = `translateX(${movedX}px)`;
+        }
+    }
+    right.onclick = () => {
+        if(movedX >= -3000){
+            movedX -= 1000;
+            carousel.style.transform = `translateX(${movedX}px)`;
+        }else{
+            movedX = 0;
+            carousel.style.transform = `translateX(${movedX}px)`;
+        }
+    }
+</script>

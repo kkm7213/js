@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>타이핑</title>
+</head>
+<style>
+    span{
+        display: inline-block;
+        color: #e33f3f;
+        border-right: 2px solid black;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        animation: blink 1s infinite,
+        typing 3s steps(24) forwards;
+
+    }
+    @keyframes typing {
+        from{
+            width: 0;
+        }
+        to{
+            width: 100%;
+        }
+    }
+    @keyframes blink {
+        from {
+            border-color: transparent;
+        }
+        50%{
+            border-color: black;
+        }
+        to{
+            border-color: transparent;
+        }
+    }
+</style>
+<body>
+<main>
+    <h1>Kim's Portfolio</h1>
+    <span>Front End Developer</span>
+</main>
+</body>
+</html>
+
+
+
+
+
